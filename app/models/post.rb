@@ -19,7 +19,7 @@ attr_accessor :id, :title, :author, :body, :publish
     }.to_json
   end
 
-  def punlished?
+  def published?
     @published == false
   end
 end

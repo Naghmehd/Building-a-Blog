@@ -15,10 +15,10 @@ module App
     # This is an example
     @all_posts ||= [
       (Post.new(1, "Learn Ruby on Rails", "Justin", "This a class to learn Ruby", true )),
-      (Post.new(2, "Learn Ruby", "Vivek", "This a class to learn Ruby", true )),
-      (Post.new(3, "Learn Ruby", "Colin", "This a class to learn Ruby", true )),
-      (Post.new(4, "Learn Ruby", "Van", "This a class to learn Ruby", true )),
-      (Post.new(5, "Learn Ruby", "Dane", "This a class to learn Ruby", true ))
+      (Post.new(2, "Learn Ruby", "Vivek", "This a class to learn Ruby",           true )),
+      (Post.new(3, "Learn Ruby", "Colin", "This a class to learn Ruby",           true )),
+      (Post.new(4, "Learn Ruby", "Van", "This a class to learn Ruby",             true )),
+      (Post.new(5, "Learn Ruby", "Dane", "This a class to learn Ruby",            true ))
     ]
   end
 

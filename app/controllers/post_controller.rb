@@ -1,7 +1,7 @@
 require 'erb'
 class PostsController < ApplicationController
   def index #Get
-    @post = App.post
+    @posts = App.posts
     render_template 'posts/index.html.erb'
   end
 
