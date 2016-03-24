@@ -1,42 +1,29 @@
-require 'erb'
-class PostsController < ApplicationController
+class APIPostsController < ApplicationController
   def index #Get
-    @post = App.post
-    render_template 'posts/index.html.erb'
+    render App.posts.to_json, status: "200 OK"
   end
 
   def show #Get
     post = find_post_by_id
+
     if post
-      @post = post
-      render_template 'posts/show.html.erb'
+     render post.to_json
     else
-      render_not_found
+     render_not_found
     end
   end
 
-# new
-  def new
-    render_template 'posts/new.html.erb'
-  end
-
-  def create #post
+  def create
     last_post = App.posts.max_by { |post| post.id }
     new_id = last_post.id + 1
 
     App.posts.push(
       Post.new(new_id, params["title"], params["author"],params["body"], true)
     )
+    render({ message: "Successfully created!", id: new_id }.to_json)
   end
 
-  def edit
-    @post = find_post_by_id
-
-    render_template "posts/edit.html.erb"
-  end
-
-
-  def update #PUT
+  def update
     post = find_post_by_id
 
     if post
@@ -51,21 +38,23 @@ class PostsController < ApplicationController
       unless params["body"].nil? || params["body"].empty?
         post.body = params["body"]
       end
-      redirect_to "posts/show.html.erb"
+
+      render post.to_json, status: "200 OK"
     else
       render_not_found
     end
   end
 
-  def destroy #DELETE
+  def destroy
     post = find_post_by_id
 
     if post
-      App.posts.delete(post) #destory it
+      render ({ message: "Successfully Deleted post"}).to_json
     else
       render_not_found
     end
   end
+
 
   private
 
@@ -74,8 +63,10 @@ class PostsController < ApplicationController
   end
 
   def render_not_found
-
-    render_template "posts/not_found.html.erb"
+    return_message = {
+      message: "post not found",
+      status: '404'
+    }.to_json
 
     render return_message, status: "404 Not Found"
   end

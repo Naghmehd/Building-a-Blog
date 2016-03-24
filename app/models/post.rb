@@ -1,7 +1,7 @@
 class Post
 attr_accessor :id, :title, :author, :body, :publish
 
-  def def initialize(id, title, author, body, publish)
+  def initialize(id, title, author, body, publish)
     @id = id
     @title = title
     @author = author

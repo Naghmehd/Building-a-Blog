@@ -16,11 +16,11 @@ class Router
     #
     # Put your routes in this array using the get, post, put, delete methods below. (remember order matters)
     [
-      post('/tweets', TweetsController, :create),
-      get('/tweets/new', TweetsController, :new),
-      get('/tweets/:id', TweetsController, :show),
-      get('/tweets', TweetsController, :index),
-      get('/not_here', TweetsController, :not_here), # This is to demo the new redirect_to method
+      api_resource('api/posts',    APIPostsController),
+      api_resource('api/comments', APICommentsController),
+
+      resource("posts",    PostsController),
+      resource("comments", CommentsController),# This is to demo the new redirect_to method
 
       get('/assets/:type/:name', AssetsController, :handle)
     ].flatten.find(&:itself)

@@ -1,5 +1,5 @@
 require 'erb'
-class CommentController < ApplicationController
+class CommentsController < ApplicationController
   def index #Get
     if request[:format] == "json"
       render App.comments.to_json, status: "200 OK"
@@ -32,7 +32,7 @@ class CommentController < ApplicationController
     new_id = last_comment.id + 1
 
     App.comments.push(
-      comment.new(new_id, params["message"], params["author"], params["post_id"] false)
+      comment.new(new_id, params["message"], params["author"], params["post_id"], false)
     )
     puts App.comments.to_json
 
