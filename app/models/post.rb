@@ -20,6 +20,6 @@ attr_accessor :id, :title, :author, :body, :publish
   end
 
   def punlished?
-    @published == true
+    @published == false
   end
 end

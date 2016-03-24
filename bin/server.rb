@@ -11,15 +11,27 @@ require_relative '../lib/all'
 
 module App
   # Place all data here inside of a method
-  def App.tweets
+  def App.posts
     # This is an example
-    @all_tweets ||= [
-      { message: "cool tweet!", id: 1},
-      { message: "badd tweet!", id: 2},
-      { message: "ohno tweet!", id: 3},
-      { message: "eehhh tweet", id: 4},
+    @all_posts ||= [
+    (Post.new(1, "Learn Ruby on Rails", "Justin", "This a class to learn Ruby", True )),
+    (Post.new(2, "Learn Ruby", "Vivek", "This a class to learn Ruby", True )),
+    (Post.new(3, "Learn Ruby", "Colin", "This a class to learn Ruby", True )),
+    (Post.new(4, "Learn Ruby", "Van", "This a class to learn Ruby", True )),
+    (Post.new(5, "Learn Ruby", "Dane", "This a class to learn Ruby", True ))
     ]
   end
+
+  def App.comments
+    @all_comments ||= [
+      (Comments.new(1,"This is great post.", "Brent", 1)),
+      (Comments.new(2,"This can be also written like...", "Sally", 1)),
+      (Comments.new(3,"This article really helped me.", "Dave", 2)),
+      (Comments.new(4,"Look forward to next article.", "Jorden", 2)),
+      (Comments.new(5,"You can read more on this here.", "Jerad", 3)),
+    ]
+  end
+
 end
 
 system('clear')
