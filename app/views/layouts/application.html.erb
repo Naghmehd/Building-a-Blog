@@ -3,46 +3,39 @@
   <head>
     <title>My Blog</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
-    <link rel="stylesheet" type="text/css" href="../app/assets/stylesheets/application.css">
+    <link rel="stylesheet" type="text/css" href="/assets/stylesheets/application.css">
   </head>
   <body>
     <header>
       <nav class="navigation">
         <ul class="menu">
-          <li><a href="application.html"></a>Home</li>
-          <li><a href="posts/index.html"></a>Post Index</li>
-          <li><a href="comments/index.html"></a>Comment Index</li>
-          <li><a href="posts/new.html"></a>Create New Post</li>
+          <li><a href="application.html">Home</a></li>
+          <li><a href="posts/index.html">Post Index</a></li>
+          <li><a href="comments/index.html">Comment Index</a></li>
+          <li><a href="posts/new.html">Create New Post</a></li>
           <li><a href="comments/new.html">New Comment</a></li>
         </ul>
       </nav>
     </header>
 
-    <hr>
 
-    <section class = "main">
+    <section class="main">
       <div class="sub-header">
         <a class="button" href="##">New Post</a>
       </div>
-
-      <hr>
-
-      <div class="post">
-
-         <%= yield %>
-
-      </div>
-        <div class="sub-header2">
-        </div>
+      
+       <%= yield %>
     </section>
 
     <footer>
       <div class="footer-menu">
-        <li><a href="#">Status<alt="Status"></a></li>
-        <li><a href="#">API<alt="API"></a></li>
-        <li><a href="#">Training<alt="Training"></a></li>
-        <li><a href="#">Shop<alt="Shop"></a></li>
-        <li><a href="#">About<alt="About"></a></li>
+        <ul>
+          <li><a href="#">Status<alt="Status"></a></li>
+          <li><a href="#">API<alt="API"></a></li>
+          <li><a href="#">Training<alt="Training"></a></li>
+          <li><a href="#">Shop<alt="Shop"></a></li>
+          <li><a href="#">About<alt="About"></a></li>
+        </ul>
       </div>
     </footer>
   </body>
