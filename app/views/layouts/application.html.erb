@@ -9,11 +9,11 @@
     <header>
       <nav class="navigation">
         <ul class="menu">
-          <li><a href="application.html">Home</a></li>
-          <li><a href="posts/index.html">Post Index</a></li>
-          <li><a href="comments/index.html">Comment Index</a></li>
-          <li><a href="posts/new.html">Create New Post</a></li>
-          <li><a href="comments/new.html">New Comment</a></li>
+          <li><a href="/posts">Home</a></li>
+          <li><a href="/posts">Post</a></li>
+          <li><a href="/comments">Comments</a></li>
+          <li><a href="/posts/new">Create Post</a></li>
+          <li><a href="/comments/new">New Comment</a></li>
         </ul>
       </nav>
     </header>
@@ -21,10 +21,12 @@
 
     <section class="main">
       <div class="sub-header">
-        <a class="button" href="##">New Post</a>
+        <a class="button" href="/posts/new">New Post</a>
       </div>
-      
+
        <%= yield %>
+
+
     </section>
 
     <footer>
