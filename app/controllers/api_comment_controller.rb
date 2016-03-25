@@ -4,7 +4,7 @@ class APICommentsController < ApplicationController
   end
 
   def show #Get
-    post = find_post_by_id
+    post = find_comment_by_id
 
     if comment
      render comment.to_json
@@ -37,7 +37,7 @@ class APICommentsController < ApplicationController
   private
 
   def find_comment_by_id
-    App.comments.find { |t| t.id == params[:comment_id].to_i }
+    App.comments.find { |c| c.id == params[:id].to_i }
   end
 
   def render_not_found
