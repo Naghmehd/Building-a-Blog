@@ -1,11 +1,13 @@
 <h1> All Comments! </h1>
 
-<ul>
-  <% @comments.each do |comment| %>
-    <li><%= comment.title %> </br>
-      <%= comment.author %> </br>
-      <%= comment.body %> </br>
-      <a href="/comments/<%= comment.id %>">show</a>
-    </li>
-  <% end %>
-</ul>
+<div class="new_comment">
+  <ul>
+    <% @comments.each do |comment| %>
+      <li><%= comment.message %> </br>
+        <%= comment.author %> </br>
+
+        <a href="/comments/<%= comment.comment_id %>">show</a>
+      </li>
+    <% end %>
+  </ul>
+</div>

@@ -1,7 +1,9 @@
 <h1> Create a new comment!</h1>
 
-<form action="/comments" method="comment">
-  <input type="text" name="mesage" id="message" />
-  <input type="text" name="author" id="author" />
-  <input type="submit" name="commit" id="submit" />
-</form>
+<div class="new_comment">
+  <form action="/comments" method="POST">
+    <li>Message <input type="text" name="mesage" id="message" /></li>
+    <li>Author <input type="text" name="author" id="author" /><li>
+    <input type="submit" name="commit" id="submit" />
+  </form>
+</div>

@@ -1,9 +1,9 @@
 class Comment
 attr_accessor :comment_id, :message, :author, :post_id
 
-  def initialize(comment_id, title, author, post_id)
-    @cooment_id = id
-    @title = title
+  def initialize(comment_id, message, author, post_id)
+    @comment_id = comment_id
+    @message = message
     @author = author
     @post_id = post_id
   end
@@ -11,13 +11,13 @@ attr_accessor :comment_id, :message, :author, :post_id
   def to_json(_ = nil)
     {
       id: id,
-      title: title,
+      message: message,
       author: author,
       post_id: post_id
     }.to_json
   end
 
   def link_id
-    @post_id = @id
+    @comment_id = @id
   end
 end

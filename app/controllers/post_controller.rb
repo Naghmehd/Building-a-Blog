@@ -24,8 +24,10 @@ class PostsController < ApplicationController
     new_id = last_post.id + 1
 
     App.posts.push(
-      Post.new(new_id, params["title"], params["author"],params["body"], true)
+      Post.new(new_id, params[:title], params[:author], params[:body], true)
     )
+
+    redirect_to "/posts"
   end
 
   def edit
@@ -58,9 +60,9 @@ class PostsController < ApplicationController
 
   def destroy #DELETE
     post = find_post_by_id
-
     if post
       App.posts.delete(post) #destory it
+      redirect_to '/posts'
     else
       render_not_found
     end

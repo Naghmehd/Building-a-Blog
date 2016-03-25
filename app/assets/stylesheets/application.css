@@ -49,7 +49,7 @@ p {
 
 
 h1 {
-  font-size: 2em;
+  font-size: 1em;
   line-height: 1.25;
   margin: auto;
   padding-top: 30px;
@@ -84,11 +84,16 @@ h2 {
 
 .post {
   background-color: #EEEDF2;
-  height: 15em;
   margin: 30px 1em;
   box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
   border: 1px solid rgba(0, 0, 0, .09);
   border-radius: 3px;
+}
+
+.post li {
+  text-align: center;
+  list-style: none;
+  margin: 10px 0;
 }
 
 footer {
@@ -121,4 +126,8 @@ footer {
   text-decoration: none;
   text-align: center;
   color: #444;
+}
+
+.new_comment form {
+
 }

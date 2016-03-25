@@ -22,12 +22,13 @@ class CommentsController < ApplicationController
 
   def create #post
     last_comment = App.comments.max_by { |comment| comment.comment_id}
-    new_id = last_comment.id + 1
+    new_id = last_comment.comment_id + 1
 
     App.comments.push(
-      comment.new(new_id, params["message"], params["author"], params["post_id"], false)
+      Comment.new(new_id, params[:message], params[:author], params[:post_id])
     )
 
+    redirect_to '/comments'
   end
 
   def destroy #DELETE
@@ -47,8 +48,6 @@ class CommentsController < ApplicationController
     end
 
     def render_not_found
-
       render_template "comments/not_found.html.erb"
-
     end
 end

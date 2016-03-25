@@ -1,5 +1,5 @@
-<h2><%= @comment.message%></h2>
-<h2><%= @comment.author%><h2>
+ <h2>Message <%= @comment.message%></h2>
+ <h2>Author <%= @comment.author%><h2>
   <form action="/comments/<%= @comment.comment_id %>/delete" method="POST">
     <input type="submit" name="Delete" id="submit" value="DELETE COMMENT" confirm=true/>
 
