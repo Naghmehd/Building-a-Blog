@@ -1,11 +1,42 @@
-<h2><%= @post.title%></h2>
-<h2><%= @post.author%><h2>
-<h2><%= @post.body%></h2>
+<div class="show_post">
+  <h2><%= @post.title%></h2>
+  <h2><%= @post.author%><h2>
+  <h2><%= @post.body%></h2>
 
-<form action="/posts/<%= @post.id %>/delete" method="POST">
-  <input type="submit" name="Delete" id="submit" value="DELETE POST" confirm=true/>
-</form>
+  <p>
+   <a href="/posts/<%= @post.id %>/edit">Edit Post</a>
+  </p>
+  <form action="/posts/<%= @post.id %>/delete" method="POST">
+    <p>
+      <input type="submit" name="Delete" id="submit" value="DELETE POST" confirm=true/>
+    </p>
+  </form>
 
-<p>
-  <a href="/posts">Go to All Posts</a>
-</p>
+  <div class="new_comment">
+  <form action='/post/'>
+    <p>
+      Message: <input type="text" name="message" id="message">
+    </p>
+    <p>
+      <input class="button" type="submit">
+    </p>
+  </form>
+  </div>
+
+  <p>
+    <a href="/posts/<%= @post.id %>"></a>
+  </p>
+
+  <ul>
+    <% @comments.each do |comment| %>
+      <li><%= comment.message %> </br>
+        <%= comment.author %> </br>
+
+        <a href="/comments/<%= comment.comment_id %>">show</a>
+      </li>
+    <% end %>
+    <p>
+      <a href="/posts">Go to All Posts</a>
+    </p>
+  </ul>
+</div>

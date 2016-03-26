@@ -16,8 +16,4 @@ attr_accessor :comment_id, :message, :author, :post_id
       post_id: post_id
     }.to_json
   end
-
-  def link_id
-    @comment_id = @id
-  end
 end
