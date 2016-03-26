@@ -1,10 +1,12 @@
-<div class="post">
+<article>
   <h1> All Posts! </h1>
-  <ul>
-    <% @posts.each do |post| %>
-      <a href="/posts/<%= post.id %>"><li><%= post.title %></li></a>
-      <li><%= post.author %></li>
-      <li><%= post.body %></li>
-    <% end %>
-  </ul>
-</div>
+<div class="index_post">
+    <ul>
+       <%@posts.each do |post| %>
+        <a href="/posts/<%= post.id %>"><li><%= post.title %></li></a>
+        <li><%= post.author %></li>
+        <li><%= post.body %></li>
+      <% end %>
+    </ul>
+  </div>
+</article>
