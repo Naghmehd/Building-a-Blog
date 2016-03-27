@@ -14,12 +14,11 @@
 
   <div class="new_comment">
   <form action='/post/'>
-    <p>
-      Message: <input type="text" name="message" id="message">
-    </p>
-    <p>
-      <input class="button" type="submit">
-    </p>
+    <fieldset>
+      <legend>Comment:</legend><input type="text" name="message" id="message" />
+
+        <p><input class="button" type="submit" id="submit"></p>
+    </fieldset>
   </form>
   </div>
 
@@ -40,3 +39,5 @@
     </p>
   </ul>
 </div>
+
+<!--  -->

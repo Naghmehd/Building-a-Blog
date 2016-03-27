@@ -91,26 +91,45 @@ input#submit {
     text-decoration: none;
 }
 
+input.button {
+  background-color: #B79C8F;
+  width: 8em;
+  height: 3em;
+  margin: 1em auto 0em auto;
+  color: #fff;
+  border: 1px solid rgba(0, 0, 0, .09);
+  border-radius: 5px;
+  text-decoration: none;
+}
+
 label{
     display:inline-block;
     width:100px;
 }
 
-.index_post ul{
-	background-color: #fff;
-	background-color: rgba(fff, 0, 0, 0.04);
-	border-radius: 3px;
+ul .index_post {
+  list-style: none;
+  background-color: #EEEDF2;
+  margin: 30px 1em;
+  padding: 0.5em 1em;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
+  border: 1px solid rgba(0, 0, 0, .05);
+  border-radius: 3px;
 }
 
-.post li {
+.post lu {
   list-style: none;
-  margin: 0 0 3px 0;
+  *margin: 0 0 3px 0;
 }
 
 .new_post ul {
   list-style: none;
   display:inline-block;
   width:100px;
+}
+
+.new_post{
+  margin: 10px 5px;
 }
 
 .new_post input#submit {
@@ -156,6 +175,10 @@ label{
 
 .show_comment h2 {
   font-weight: lighter;
+}
+
+.edit_post {
+
 }
 
 footer {
