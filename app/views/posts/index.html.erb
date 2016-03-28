@@ -6,9 +6,8 @@
         <%@posts.each do |post| %>
           <div class="index_post">
           <a href="/posts/<%= post.id %>"><li><%= post.title %></li></a>
-          <li><%= post.author %></li>
+          <li class="author"><%= post.author %></li>
           <li><%= post.body %></li>
-          <!-- <hr> -->
           </div>
         <% end %>
     </ul>

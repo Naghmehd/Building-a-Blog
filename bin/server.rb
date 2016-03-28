@@ -14,21 +14,21 @@ module App
   def App.posts
     # This is an example
     @all_posts ||= [
-      (Post.new(1, "Learn Ruby on Rails", "Justin", "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. ", true )),
-      (Post.new(2, "Learn Ruby", "Vivek", "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",           true )),
-      (Post.new(3, "Learn Ruby", "Colin", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lorem nunc, tempus quis auctor sed, tincidunt vel justo. Donec et laoreet magna. Maecenas dignissim tristique elit",           true )),
-      (Post.new(4, "Learn Ruby", "Van", "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",             true )),
-      (Post.new(5, "Learn Ruby", "Dane", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lorem nunc, tempus quis auctor sed, tincidunt vel justo. Donec et laoreet magna. Maecenas dignissim tristique elit",            true ))
+      (Post.new(1, "Learn Ruby on Rails", "Justin  Herrick", "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. ", true )),
+      (Post.new(2, "Ruby Wizardry", "Weinstein", "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",           true )),
+      (Post.new(3, "Clean Code", "Robert Martin", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lorem nunc, tempus quis auctor sed, tincidunt vel justo. Donec et laoreet magna. Maecenas dignissim tristique elit",           true )),
+      (Post.new(4, "Pratical Object-Oriented Design", "Sandi Metz", "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",             true )),
+      (Post.new(5, "Simple isn't just that important", "David Heinemeier Hansson", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lorem nunc, tempus quis auctor sed, tincidunt vel justo. Donec et laoreet magna. Maecenas dignissim tristique elit",            true ))
     ]
   end
 
   def App.comments
     @all_comments ||= [
-      (Comment.new(1,"This is great post.", "Brent", 1)),
-      (Comment.new(2,"This can be also written like...", "Sally", 1)),
-      (Comment.new(3,"This article really helped me.", "Dave", 2)),
-      (Comment.new(4,"Look forward to next article.", "Jorden", 2)),
-      (Comment.new(5,"You can read more on this here.", "Jerad", 3)),
+      (Comment.new(1,"This is great post.", "Margerate Darbey", 1)),
+      (Comment.new(2,"This can be also written like...", "Sally Martin", 1)),
+      (Comment.new(3,"This article really helped me.", "Dave Ramsey", 2)),
+      (Comment.new(4,"Look forward to next article.", "Peter Tucker", 2)),
+      (Comment.new(5,"You can read more on this here.", "Adam Love", 3)),
     ]
   end
 
