@@ -13,11 +13,10 @@
   </form>
 
   <div class="new_comment">
-  <form action='/post/'>
+  <form action="/comments" method="POST">
     <fieldset>
-      <legend>Comment:</legend><textarea id='message' rows="2" cols="100" name='message' id='message' value='<%= @post.body %>' />
+      <legend>Comment:</legend><textarea id='message' rows="2" cols="100" name='message' id='message'  />
       </textarea>
-      <!-- <input type="text" name="message" id="message" /> ---->
 
         <p>Author <input type="text" name="author" id="author" /></p>
 
