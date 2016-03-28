@@ -65,6 +65,10 @@ h2 {
   margin-bottom: 3em;
 }
 
+h4 {
+  font-weight: normal;
+  font-size: 1em;
+}
 .sub-header {
   background: #e8f0f5;
   padding: 20px 0;
