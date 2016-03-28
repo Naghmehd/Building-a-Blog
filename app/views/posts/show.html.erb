@@ -17,11 +17,10 @@
     <fieldset>
       <legend>Comment:</legend><textarea id='message' rows="2" cols="100" name='message' id='message'  />
       </textarea>
-
+      <input type="hidden" name="post_id" value="<%= @post.id %>" />
         <p>Author <input type="text" name="author" id="author" /></p>
 
         <p><input class="button" type="submit" name="commit" id="submit"></p>
-
     </fieldset>
   </form>
   </div>

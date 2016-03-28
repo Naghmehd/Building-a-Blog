@@ -23,6 +23,7 @@ class CommentsController < ApplicationController
   def create #post
     last_comment = App.comments.max_by { |comment| comment.comment_id}
     new_id = last_comment.comment_id + 1
+    binding.pry
 
     App.comments.push(
       Comment.new(new_id, params[:message], params[:author], params[:post_id])
