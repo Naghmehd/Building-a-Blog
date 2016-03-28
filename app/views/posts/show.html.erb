@@ -15,9 +15,14 @@
   <div class="new_comment">
   <form action='/post/'>
     <fieldset>
-      <legend>Comment:</legend><input type="text" name="message" id="message" />
+      <legend>Comment:</legend><textarea id='message' rows="2" cols="100" name='message' id='message' value='<%= @post.body %>' />
+      </textarea>
+      <!-- <input type="text" name="message" id="message" /> ---->
 
-        <p><input class="button" type="submit" id="submit"></p>
+        <p>Author <input type="text" name="author" id="author" /></p>
+
+        <p><input class="button" type="submit" name="commit" id="submit"></p>
+
     </fieldset>
   </form>
   </div>

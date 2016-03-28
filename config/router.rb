@@ -4,17 +4,7 @@ class Router
   end
 
   def route
-    # Routes are parsed from top down, so make sure they follow this style
-    # /resource/:id/action
-    # /resouce/:id
-    # /resource
-    # If you don't use that order, it will be like the if statements in fizzbuzz
-    # syntax:
-    # get(<route_string>, <controller_name_constant>, <action_name_symbol)
-    # put('/tweets/:id/edit', TweetsController, :edit)
-    #This route would be for putting an update for the tweet where :id is the number in the URL
-    #
-    # Put your routes in this array using the get, post, put, delete methods below. (remember order matters)
+  
     [
       api_resource('api/posts',    APIPostsController),
       api_resource('api/comments', APICommentsController),
